@@ -1,0 +1,109 @@
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus, a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+body, td, th, tr, p, a {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+strong {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+}
+
+heading {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+}
+
+papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.papertitle {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+}
+
+.name {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+}
+
+.one {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.one img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hoverZoomLink {
+  transition: transform 0.3s ease;
+}
+
+.hoverZoomLink:hover {
+  transform: scale(1.02);
+}
+
+h2 {
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #eee;
+}
+
+ul {
+  margin-top: 10px;
+  line-height: 1.8;
+}
+
+li {
+  margin-bottom: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  table {
+    width: 100% !important;
+  }
+  
+  td {
+    display: block !important;
+    width: 100% !important;
+    padding: 10px !important;
+  }
+  
+  .one {
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  
+  .name {
+    font-size: 28px;
+  }
+}
