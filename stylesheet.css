@@ -64,6 +64,12 @@ h2 {
   font-weight: 600;
   color: #111;
   line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+a:hover .papertitle,
+a:focus .papertitle {
+  color: #f09228 !important;
 }
 
 /* 论文图片容器 */
