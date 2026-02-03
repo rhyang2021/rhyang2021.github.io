@@ -1,58 +1,81 @@
+/* 全局样式 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+}
+
 a {
-  color: #1772d0;
+  color: #2563eb;
   text-decoration: none;
+  transition: all 0.2s ease;
 }
 
-a:focus, a:hover {
-  color: #f09228;
-  text-decoration: none;
+a:hover {
+  color: #1d4ed8;
+  text-decoration: underline;
 }
 
-body, td, th, tr, p, a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-}
-
-strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-}
-
-heading {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-}
-
-papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-.papertitle {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 15px;
-  font-weight: 700;
-}
-
-name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 32px;
-}
-
+/* 名字样式 */
 .name {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 36px;
+  font-size: 42px;
   font-weight: 700;
+  margin-bottom: 10px;
+  color: #111;
 }
 
+/* 头像样式 */
+.hoverZoomLink {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hoverZoomLink:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* 标题样式 */
+h2 {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  margin-top: 10px;
+  color: #111;
+}
+
+/* 论文标题 */
+.papertitle {
+  font-size: 17px;
+  font-weight: 600;
+  color: #111;
+  line-height: 1.4;
+}
+
+/* 论文图片容器 */
 .one {
   width: 100%;
   max-height: 200px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.one:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .one img {
@@ -61,32 +84,91 @@ name {
   display: block;
 }
 
-.hoverZoomLink {
-  transition: transform 0.3s ease;
-}
-
-.hoverZoomLink:hover {
-  transform: scale(1.02);
-}
-
-h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
-  font-size: 22px;
-  margin: 0;
-  padding-bottom: 10px;
-}
-
+/* 列表样式 */
 ul {
   margin-top: 10px;
-  line-height: 1.8;
+  line-height: 1.9;
+  list-style-position: outside;
+  padding-left: 20px;
 }
 
 li {
-  margin-bottom: 8px;
+  margin-bottom: 12px;
 }
 
-/* Responsive */
+strong, b {
+  font-weight: 600;
+  color: #111;
+}
+
+/* 页脚样式 */
+footer {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 60px 20px 40px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.visitors-section {
+  margin-bottom: 40px;
+}
+
+.visitors-section h3 {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #999;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+}
+
+/* 高亮强调文本 */
+em {
+  font-style: normal;
+  color: #666;
+}
+
+/* 论文条目间距 */
+table tbody tr {
+  margin-bottom: 15px;
+}
+
+/* 优化段落间距 */
+p {
+  margin-bottom: 12px;
+  line-height: 1.7;
+}
+
+/* 研究兴趣列表 */
+ul li {
+  color: #444;
+}
+
+/* 响应式设计 */
 @media (max-width: 768px) {
+  body {
+    font-size: 15px;
+  }
+
+  .name {
+    font-size: 32px;
+  }
+  
+  h2 {
+    font-size: 22px;
+  }
+
   table {
     width: 100% !important;
   }
@@ -101,8 +183,12 @@ li {
     max-width: 100%;
     margin-bottom: 15px;
   }
-  
-  .name {
-    font-size: 28px;
+
+  footer {
+    padding: 40px 15px 30px;
+  }
+
+  .visitors-section h3 {
+    font-size: 24px;
   }
 }
