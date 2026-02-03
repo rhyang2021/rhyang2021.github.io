@@ -14,14 +14,19 @@ body {
 }
 
 a {
-  color: #2563eb;
-  text-decoration: none;
-  transition: all 0.2s ease;
+  color: #1772d0;
+  text-decoration: none !important;
+  transition: color 0.2s ease;
 }
 
-a:hover {
-  color: #1d4ed8;
-  text-decoration: underline;
+a:hover, a:focus {
+  color: #f09228 !important;
+  text-decoration: none !important;
+}
+
+/* 红色高亮文字 */
+font[color="red"] {
+  color: #c00 !important;
 }
 
 /* 名字样式 */
