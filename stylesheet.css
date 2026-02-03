@@ -25,8 +25,22 @@ a:hover, a:focus {
 }
 
 /* 红色高亮文字 */
-font[color="red"] {
+font[color="red"],
+font[color="red"] b,
+font[color="red"] strong,
+font[color="red"] * {
   color: #c00 !important;
+}
+
+/* 深红色强调文字 */
+span[style*="color: #800000"],
+span[style*="color:#800000"] {
+  color: #800000 !important;
+}
+
+span[style*="color: #800000"] b,
+span[style*="color:#800000"] b {
+  color: #800000 !important;
 }
 
 /* 名字样式 */
@@ -109,7 +123,6 @@ li {
 
 strong, b {
   font-weight: 600;
-  color: #111;
 }
 
 /* 页脚样式 */
